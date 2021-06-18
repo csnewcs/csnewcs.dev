@@ -1,0 +1,42 @@
+body {
+    background-color: #000000;
+}
+#projects {
+    /* background-color: powderblue; */
+    margin-left: 55%;
+}
+#titleBanner {
+    color: white;
+}
+
+.github {
+    float: right;
+    -webkit-filter: invert(1);
+   filter: invert(1);
+}
+.content {
+    float:inherit;
+    color: white;
+}
+.title {
+    color: white;
+}
+
+
+#information {
+    background-color: gray;
+    margin-right: 55%;
+}
+.information {
+    margin-bottom: 10px;
+}
+.birth {
+    float: left;
+    margin-left: 5px;
+}
+#birth {
+    /* outline-width: 2px; */
+    /* outline-color: black; */
+    background-color: white;
+    margin: 10px;
+}
