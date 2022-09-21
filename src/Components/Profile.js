@@ -4,11 +4,7 @@ function Profile() {
     const githubLink = 'https://github.com/csnewcs'
     let style = {
         display: 'flex',
-        width: '50%',
         justifyContent: 'center',
-        top: '40%',
-        position: 'fixed',
-        transform: 'translateY(-50%)'
     }
     return (
         <div className="profile" style={style}>

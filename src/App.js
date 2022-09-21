@@ -1,13 +1,15 @@
 import './App.css';
 import Profile from './Components/Profile'
-import ProjectItem from './Components/ProjectItem';
 import Portfolio from './Components/Portfolio';
 
 function App() {
   let style = {
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     display: 'flex',
-    flexDirection: 'column',
+    flexWrap: 'wrap',
+    width: '100vw',
+    height: '90vh',
+    alignItems: 'center'
   }
   return (
     <div className="App" style={style}>
