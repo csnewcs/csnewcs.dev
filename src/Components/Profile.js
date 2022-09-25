@@ -8,7 +8,7 @@ function Profile() {
     }
     return (
         <div className="profile" style={style}>
-            <h1 style={{paddingRight: '30px', paddingTop: '15px'}}>csnewcs / 시뉴</h1>
+            <h1 style={{paddingRight: '30px', paddingTop: '15px'}}>csnewcs</h1>
             <div>
                 <RoundButton backgroundColor='gray' textColor='white' text='Github' image='https://github.githubassets.com/favicons/favicon.png' link={githubLink} fontFamily={'Gothic A1'} fontSize='18pt'/>
                 <hr />
