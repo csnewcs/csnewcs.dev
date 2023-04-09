@@ -2,8 +2,10 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
-function ProjectItem({ title, description, icon, iconAlt = 'icon', fontAwesomeIcon, color = 'black', link = '' }) {
-    let style = {
+
+function ProjectItem({ title, description, icon, iconAlt = 'icon', fontAwesomeIcon, color = 'black', link = '', used=[]}) {
+    const images = require.context('../icons', true)
+    const style = {
         borderLeft: '5px solid ' + color,
         display: 'flex',
         alignItems: 'center',
@@ -11,9 +13,16 @@ function ProjectItem({ title, description, icon, iconAlt = 'icon', fontAwesomeIc
         cursor: 'pointer',
         marginTop: '1em'
     }
-    let innerStyle = {
+    const innerStyle = {
         justifyContetent: 'start',
         // border: '1px solid gray'
+    }
+    const getLogo = (logoString) => {
+        return (<img src={images(`./${logoString}.png`)} alt={logoString} style={{height: '30px'}}></img>)
+    }
+    const getLogosDiv = (logoStrings) => {
+        let div = <div style={{justifyContent: 'space-evenly', width: '100%'}}>{logoStrings.map((logoString) => {return getLogo(logoString)})}</div>
+        return div
     }
     if (icon === undefined || icon === null) {
         return (
@@ -22,6 +31,7 @@ function ProjectItem({ title, description, icon, iconAlt = 'icon', fontAwesomeIc
                 <div style={innerStyle}>
                     <p style={{ fontSize: '2em' }}>{title}</p>
                     <p>{description}</p>
+                    {getLogosDiv(used)}
                 </div>
             </div>
         )
@@ -33,6 +43,7 @@ function ProjectItem({ title, description, icon, iconAlt = 'icon', fontAwesomeIc
                 <div style={innerStyle}>
                     <p style={{ fontSize: '2em' }}>{title}</p>
                     <p>{description}</p>
+                    {getLogosDiv(used)}
                 </div>
             </div>
         )
